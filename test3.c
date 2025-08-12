@@ -52,6 +52,31 @@ if(1 <= dice && dice <= 6){
                 printf("範囲外の数値です\n");
             }
 
+            int i;
+            printf("1から3の数を入力してください：");
+
+            scanf("%d",&i);
+
+            switch(i){
+
+                case 1:
+                printf("one\n");
+                break;
+
+                case 2:
+                printf("two");
+                break;
+
+                case 3:
+                printf("three\n");
+                break;
+
+                default:
+                printf("不適切な値です\n");
+                break;
+                
+            }
+            
 
 
 
