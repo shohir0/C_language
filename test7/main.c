@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
     //	同じ計算が3回(関数を呼び出して計算）
     d1 = avg(a,b);
     d2 = avg(4.1,5.7);
-    d3 = avg(c,2.8);
+    d3 = avg(c,2.8);  /*dsdsdsdsds*/
     printf("d1 = %lf,d2 = %lf,d3 = %lf\n",d1,d2,d3);
     return 0;
 }
