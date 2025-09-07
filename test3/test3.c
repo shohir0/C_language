@@ -5,7 +5,7 @@ int main(int arg, char **argv)
 {
 
     int a;
-    printf("数値を入力してね：");
+    printf("数値を入力してください：");
 
     scanf("%d", &a);
 
