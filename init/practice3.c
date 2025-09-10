@@ -195,8 +195,27 @@ int main(){
         printf("正の値です。\n");
     }
 
+     /*-----------------------------------------------------------*/
+    printf("---prob3_13---\n");
 
-    
+    int k;
+
+    srand((unsigned)time(NULL));
+    k = rand() % 3 + 1; 
+
+    printf("数値は%dです。\n",k);
+
+    if(k == 1){
+        printf("グー\n");
+    }
+    else if(k == 2){
+        printf("パー\n");
+    }
+    else{
+        printf("チョキ\n");
+    }
+
+ 
 
 
     return 0;
