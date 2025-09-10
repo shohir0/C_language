@@ -125,7 +125,7 @@ int main(){
         printf("閏年です。\n");
      }
      else{
-        printf("閏年ではありません。\n");
+        printf("閏年ではありません\n");
      }
 
 
