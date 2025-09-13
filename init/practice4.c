@@ -240,7 +240,7 @@ int main (){
 
      for(a = 1;a <= 9;a ++){
       for(b = 1;b < 9;b ++){
-        printf("%d*%d=%d",b,a,b*a);
+        printf("%d*%d=%-2d",b,a,b*a);
         printf(" ");
       }
       printf("\n");
