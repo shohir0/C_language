@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE 5
+
+int main(){
+
+    int ar1[SIZE];
+    char ar2[SIZE];
+    
+    int i;
+
+    int* p1 = NULL;
+    char* p2 = NULL;
+
+    for(i = 0; i < SIZE; i++){
+
+        ar1[i] = i;
+        ar2[i] = 'A' + i;
+    }
+
+    p1 = &ar1[0];
+    p2 = &ar2[0];
+
+    for(i = 0; i < SIZE; i++){
+        printf("ar1[%d]=%d *(p1+%d)=%d ",i,ar1[i],i,*(p1+i));
+        printf("ar2[%d]=%c *(p2+%d)=%c\n",i,ar2[i],i,*(p2+i));
+    }
+    printf("\n");
+
+    #undef SIZE
+    #define SIZE 3
+
+    int *p3 = NULL;
+    double *p4 = NULL;
+
+    p3 = (int*)malloc(sizeof(int)*SIZE);
+    p4 = (double*)malloc(sizeof(double)*SIZE);
+
+    for(i = 0; i < SIZE; i++){
+
+        p3[i] = i;
+        p4[i] = i / 10.0;
+    
+    }
+
+    for(i = 0; i < SIZE; i++){
+        printf("p1[%d]=%d  p2[%d]=%lf\n",i,p3[i],i,p4[i]);
+    }
+
+    free(p3);
+    free(p4);
+
+    return 0;
+}
