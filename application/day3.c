@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <malloc.h>
 
 #define SIZE 5
+
+  int createMemory(char**,int);
+    void freeMemory(char**);
 
 int main(){
 
@@ -51,5 +56,45 @@ int main(){
     free(p3);
     free(p4);
 
+    char *s[3] = {"Taro","Hanako","Tom"};
+    char **pps = NULL;
+
+    for(i = 0; i < 3; i++){
+        printf("%s\n",s[i]);
+    }
+
+    pps = s;
+
+    for(i = 0; i < 3; i++){
+        printf("%s\n",*pps);
+        pps++;
+    }
+
+    char *M = NULL;
+
+    createMemory(&M,255);
+    strcpy(M,"Hello World\n");
+    printf("%s",M);
+    freeMemory(&M);
+
     return 0;
+}
+
+int createMemory(char** mem,int size){
+
+    if(*mem == NULL){
+        *mem = (char*)malloc(sizeof(char)*size);
+
+        if(*mem == 0){
+            return -1;
+        }
+        return 0;
+    }
+    return -1;
+}
+
+void freeMemory(char** mem){
+    if(mem != 0){
+        free(*mem);
+    }
 }
