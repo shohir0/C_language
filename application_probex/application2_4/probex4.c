@@ -15,9 +15,8 @@ int main(){
 
     strcpy(s3,s1);
 
-    strcat(s3,s2);
 
-    printf("統合した結果：%s\n",s3);
+    printf("統合した結果：%s\n",strcat(s1,s2));
  
     return 0;
 }
